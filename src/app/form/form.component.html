@@ -1,0 +1,97 @@
+<!-- <p>form works!</p> -->
+<div>
+    <h3>Real Estate Open House FeedBack Form</h3>
+    <p>We appreciate your thoughts!</p>
+    <hr>
+</div>
+{{ FeedBackForm.value | json }}
+
+<div class="form">
+    <form [formGroup]="FeedBackForm" (ngSubmit)="submitForm()">
+        <div class="firstName form-Group">
+            <label for="firstName">FirstName</label> 
+            <input type="text" class="form-control" formControlName="firstName">
+        </div>
+        <div class="surName form-group">
+            <label for="Name">Surname</label>
+            <input type="text" class="form-control" formControlName="surName">
+        </div>
+        <div class="phone-no form-group">
+            <label for="Phone">Phone-no</label>
+            <input type="number" class="form-control" formControlName="phoneNo">
+        </div>
+        <div class="email form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" formControlName="email">
+        </div>
+        <div class="hear">
+            <p>How did you hear about this Open House Form?</p>
+            <label for="hear"></label>
+            <input type="text">
+        </div>
+        <div class="rating">
+            <p>Please rate this house</p>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th colspan="1" scope="col" >Poor</th>
+                        <th scope="col" colspan="1">Fair</th>
+                        <th scope="col" colspan="1">Good</th>
+                        <th scope="col" colspan="1">Excellent</th>
+                    <tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="1"scope="row">Exterior</th>
+                        <td colspan="1"><input type="radio"></td>
+                        <td colspan="1"><input type="radio"></td>
+                        <td colspan="1"><input type="radio"></td>
+                        <td colspan="1"><input type="radio"></td>
+                      </tr>
+                      <tr>
+                          <th rowspan="1"scope="row">Interior</th>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                      </tr>
+                      <tr>
+                          <th rowspan="1"scope="row">Location</th>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                      </tr>
+                      <tr>
+                          <th rowspan="1"scope="row">Price</th>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                      </tr>
+                      <tr>
+                          <th rowspan="1"scope="row">Amenities</th>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>
+                          <td colspan="1"><input type="radio"></td>  
+                      </tr>
+                </tbody>
+            </table>
+         </div>
+         <div>
+            <label for="most">What do you like the most about this house?</label><br>
+            <textarea name="" id="" cols="100" rows="4"></textarea>
+         </div>
+         <div>
+            <label for="least">What do you like the least about this house?</label><br>
+            <textarea name="" id="" cols="100" rows="4"></textarea>
+         </div>
+         <div>
+            <!-- <button type="button" (click)="updateEmail()">Update Email
+            </button> -->
+            <button type="submit">Submit Form</button>
+        </div>
+    </form>
+</div>
