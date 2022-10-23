@@ -43,39 +43,39 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th rowspan="1"scope="row">Exterior</th>
-                        <td colspan="1"><input type="radio"></td>
-                        <td colspan="1"><input type="radio"></td>
-                        <td colspan="1"><input type="radio"></td>
-                        <td colspan="1"><input type="radio"></td>
+                        <th class="exterior from-control" rowspan="1"scope="row">Exterior</th>
+                        <td colspan="1"><input type="radio" value="poor" name="exterior" formControlName="exterior"></td>
+                        <td colspan="1"><input type="radio" value="fair" name="exterior" formControlName="exterior"></td>
+                        <td colspan="1"><input type="radio" value="good" name="exterior" formControlName="exterior"></td>
+                        <td colspan="1"><input type="radio" value="excellent" name="exterior" formControlName="exterior"></td>
                       </tr>
                       <tr>
-                          <th rowspan="1"scope="row">Interior</th>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
+                          <th class="interior form-control"rowspan="1"scope="row">Interior</th>
+                          <td colspan="1"><input type="radio" value="poor"name="interior" formControlName="interior"></td>
+                          <td colspan="1"><input type="radio" value="fair"name="interior" formControlName="interior"></td>
+                          <td colspan="1"><input type="radio" value="good"name="interior" formControlName="interior"></td>
+                          <td colspan="1"><input type="radio" value="excellent"name="interior" formControlName="interior"></td>
                       </tr>
                       <tr>
-                          <th rowspan="1"scope="row">Location</th>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
+                          <th class="location form-control"rowspan="1"scope="row">Location</th>
+                          <td colspan="1"><input type="radio" value=""name="location" formControlName="location"></td>
+                          <td colspan="1"><input type="radio" value=""name="location" formControlName="location"></td>
+                          <td colspan="1"><input type="radio" value=""name="location" formControlName="location"></td>
+                          <td colspan="1"><input type="radio" value=""name="location" formControlName="location"></td>
                       </tr>
                       <tr>
-                          <th rowspan="1"scope="row">Price</th>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
+                          <th class="price form-control"rowspan="1"scope="row">Price</th>
+                          <td colspan="1"><input type="radio" value="poor"name="price" formControlName="price"></td>
+                          <td colspan="1"><input type="radio" value="fair"name="price" formControlName="price"></td>
+                          <td colspan="1"><input type="radio" value="good"name="price" formControlName="price"></td>
+                          <td colspan="1"><input type="radio" value="excellent"name="price" formControlName="price"></td>
                       </tr>
                       <tr>
-                          <th rowspan="1"scope="row">Amenities</th>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>
-                          <td colspan="1"><input type="radio"></td>  
+                          <th class="amenities form-control"rowspan="1"scope="row">Amenities</th>
+                          <td colspan="1"><input type="radio" value="poor"name="amenities"formControlName="amenities"></td>
+                          <td colspan="1"><input type="radio" value="fair"name="amenities"formControlName="amenities"></td>
+                          <td colspan="1"><input type="radio" value="good"name="amenities"formControlName="amenities"></td>
+                          <td colspan="1"><input type="radio" value="excellent"name="amenities"formControlName="amenities"></td>  
                       </tr>
                 </tbody>
             </table>
@@ -87,6 +87,9 @@
          <div>
             <label for="least">What do you like the least about this house?</label><br>
             <textarea name="" id="" cols="100" rows="4"></textarea>
+         </div>
+         <div class="starRating form-control">
+            <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
          </div>
          <div>
             <!-- <button type="button" (click)="updateEmail()">Update Email

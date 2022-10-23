@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormControlName, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,6 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  starRating=0
 
   constructor() { }
   
@@ -27,8 +28,14 @@ export class FormComponent implements OnInit {
       email:new FormControl(),
       hear:new FormControl(),
       rating:new FormControl(),
+      exterior:new FormControl(),
+      interior:new FormControl(),
+      location:new FormControl(),
+      price:new FormControl(),
+      amenities:new FormControl(),
       most:new FormControl(),
       least:new FormControl(),
+      starRating:new FormControl(),
 
 
 
